@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JWG Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="rain"></canvas>
+  
+  <div class="container">
+    <h1>🌧️ JWG Tools</h1>
+
+    <div class="card">
+      <h2>📷 Câmera</h2>
+      <button onclick="abrirCamera()">Abrir Câmera</button>
+      <img id="myImage" src="" style="width: 100%; margin-top: 20px;" />
+      <div id="foto-preview"></div>
+    </div>
+
+    <div class="card">
+      <h2>🖼️ Galeria</h2>
+      <button onclick="verFotos()">Ver Fotos</button>
+      <div id="galeria"></div>
+    </div>
+
+    <div class="card">
+      <h2>☁️ Clima</h2>
+      <div id="clima">Carregando...</div>
+      <button onclick="atualizarClima()">Atualizar</button>
+    </div>
+
+    <div class="card">
+      <h2>🔔 Notificações</h2>
+      <button onclick="enviarNotificacao()">Enviar Notificação</button>
+      <button onclick="vibrar()">Vibrar</button>
+    </div>
+  </div>
+
+  <script src="rain.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
