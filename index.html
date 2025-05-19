@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JWG Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<style>
+ .containe-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-info {
+    flex: 1 1 250px;
+    text-align: center;
+  }
+
+  .card-info img {
+    max-width: 500px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .text {
+    flex: 2 1 400px;
+  }
+
+  .carde {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    line-height: 1.6;
+    font-size: 1.09rem;
+    color: #ffffff;
+    text-align: justify;
+  }
+
+  .carde p {
+    margin-bottom: 15px;
+  }
+</style>
+<body>
+  
+  <div class="container">
+    <h1>🌧️ JWG Tools</h1>
+
+    <div class="card">
+      <h2>📷 Câmera</h2>
+      <button onclick="abrirCamera()">Abrir Câmera</button>
+      <input type="file" id="inputCamera" accept="image/*" capture="environment" style="display: none;" onchange="mostrarFoto(this)" />
+      <img id="preview" src="" style="width: 100%; margin-top: 20px;" />
+    </div>
+
+    <div class="card">
+      <h2>🖼️ Galeria</h2>
+      <button onclick="verFotos()">Ver Fotos</button>
+      <div id="galeria"></div>
+      <input type="file" accept="image/*" id="seletorGaleria" style="display:none" onchange="mostrarImagemSelecionada(event)" />
+
+    </div>
+
+    <div class="card">
+      <h2>☁️ Clima</h2>
+      <div id="clima">Carregando...</div>
+      <button onclick="atualizarClima()">Atualizar</button>
+    </div>
+
+    <div class="card">
+      <h2>🔔 Notificações</h2>
+      <button onclick="enviarNotificacao()">Enviar Notificação</button>
+      <button onclick="vibrar()">Vibrar</button>
+    </div>
+  </div>
+
+  <div class="containe-info">
+    <div class="card-info">
+      <img src="IMG/fto.jpg" alt="Foto">
+    </div>
+    <div class="text">
+      <div class="carde">
+        <p>O aquecimento global é o aumento gradual da temperatura média da Terra, causado principalmente pela emissão de gases do efeito estufa, como dióxido de carbono (CO₂) e metano (CH₄). Esses gases são liberados em grandes quantidades por atividades humanas, como a queima de combustíveis fósseis, desmatamento e indústrias.</p>
+        <p>Esse aumento na temperatura tem gerado consequências graves: derretimento de geleiras, elevação do nível dos oceanos, eventos climáticos extremos (como secas, enchentes e furacões), além de ameaçar a biodiversidade e a segurança alimentar.</p>
+        <p>Combater o aquecimento global exige mudanças no nosso modo de viver — desde o uso de energia limpa até o consumo consciente e a preservação das florestas. Ainda dá tempo de agir, mas o momento é agora.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+  <script src="clima.js"></script>
+
+
+</body>
+</html>
